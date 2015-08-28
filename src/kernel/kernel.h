@@ -9,10 +9,18 @@
 #ifndef EXECUTOR_KERNAL_H
 #define EXECUTOR_KERNAL_H
 
+namespace kernel {
 
-class kernal {
+    class kernel {
 
-};
+        private:
+
+        public:
+            void run();
+
+    };
+
+}
 
 
 #endif //EXECUTOR_KERNAL_H
