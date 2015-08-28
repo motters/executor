@@ -6,4 +6,11 @@
  *  @email sammottleys@gmail.com
  */
 
-#include "kernal.h"
+#include "kernel.h"
+
+void kernel::kernel::run()
+{
+
+
+
+}
