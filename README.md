@@ -24,7 +24,9 @@ functions, templates support, command chaining, input validation, success action
 Function are inbuilt methods within Executor that perform actions. For example when analysing a response from a ran 
 commands one can run the below:
 
+<code>
 "responce": "contains:user added"
+</code>
 
 This will check whether the response from the terminal contains the phase "user added"
 
@@ -35,7 +37,9 @@ This will check whether the response from the terminal contains the phase "user 
 Some times making some methods in Executor maybe more hassle than its worth. Therefore the developer can create a
 shell script save it into the shell folder and within the command type the below to run it
 
+<code>
 "shell": "add_user.sh -user {{ user }} -passsword {{ password }}"
+</code>
 
 This will run the shell add_user.sh and include the validated and escaped inputs into the script. 
 
@@ -48,6 +52,16 @@ Templates can be created with place holder and when the template method is calle
 template and insert the relevant data into the place holders. Executor will then create or edit an exists file, making
 adding and modifying files easy. 
 
+<code>
+"feature": "template:os_user.welcome_message,username={{ username }},root_address=##template.welcome_message_location##"
+ </code>
+ 
+ The above command takes the contains of os_user/welcome_message and replaces the place holders.
+ 
+ Username is replace for username
+ 
+ root_address is replace with the contain from the configuration file template variable welcome_message_location. This
+ demonstrates the configuration function.
 
 # Development 
 

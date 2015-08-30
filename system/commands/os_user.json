@@ -18,7 +18,7 @@
         "response": "Hello World"
       },
       "generate_welcome_message": {
-        "feature": "template:username=os_user.welcome_message,root_address=##template.welcome_message_location##"
+        "feature": "template:os_user.welcome_message,username={{ username }},root_address=##template.welcome_message_location##"
       }
     },
     "validate": {
