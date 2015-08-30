@@ -3,18 +3,22 @@
   "add_user": {
     "commands": {
       "create_user": {
-        "terminate": "useradd -e {date} {username}",
+        "terminate": "useradd -e {{ date }} {{ username }}",
         "response": "NULL",
-        "failed": "log:[user_add_failed],{username},{date}"
+        "failed": "log:[[ user_add_failed ]],username={{ username }},date={{ date }}"
       },
       "check_user_added": {
         "terminate": "ls -l",
-        "response": "contains:{username}",
-        "failed": "command:delete_user|log:[user_add_failed],{username},{date}",
-        "success": "log:[user_added],{username},{date}"
+        "response": "contains:{{ username }}",
+        "failed": "command:delete_user|log:[[ user_add_failed ]],username={{ username }},date={{ date }}",
+        "success": "log:[[ user_added ]],username={{ username }},date={{ date }}"
+      },
+      "random_shell_script": {
+        "shell": "sudo /etc/executor/shells/hello_world.sh",
+        "response": "Hello World"
       },
       "generate_welcome_message": {
-        "feature": "template:os_user.welcome_message,|template.welcome_message_location|"
+        "feature": "template:username=os_user.welcome_message,root_address=##template.welcome_message_location##"
       }
     },
     "validate": {

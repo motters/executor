@@ -3,7 +3,8 @@
   "file_locations": {
     "commands": ["C:\\development\\c++\\executor\\configuration"],
     "buffers": ["C:\\development\\c++\\executor\\buffer"],
-    "templates": ["C:\\development\\c++\\executor\\templates"]
+    "templates": ["C:\\development\\c++\\executor\\templates"],
+    "shells": ["C:\\development\\c++\\executor\\shells"]
   },
 
   "key": "1234567890qwertyuiopasdfghjklzx",

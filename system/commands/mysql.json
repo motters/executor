@@ -3,8 +3,8 @@
   "auth": {
     "command": {
       "auth": {
-        "terminate": "mysql -h {host} -u {user} -p {password}",
-        "failed": "log:[mysql_auth_failed],{name},{user}"
+        "terminate": "mysql -h {{ host }} -u {{ user }} -p {{ password }}",
+        "failed": "log:[[ mysql_auth_failed ]],user={{ user }}"
       }
     },
     "validate": {
@@ -21,7 +21,7 @@
       },
       "create_database": {
         "terminate": "CREATE DATABASE {name};",
-        "failed": "log:[add_db_failed],{name}"
+        "failed": "log:[[ add_db_failed ],name={{ name }}"
       }
     },
     "roll_back":{
@@ -37,11 +37,11 @@
   "delete_database": {
     "command": {
       "auth": {
-        "command": "mysql.auth:{host},{user},{password}"
+        "command": "mysql.auth:host={{ host }},username={{ user }},password={{ password }}"
       },
       "create_database": {
-        "terminate": "DROP DATABASE {name};",
-        "failed": "log:[delete_db_failed],{name}"
+        "terminate": "DROP DATABASE {{ name }};",
+        "failed": "log:[[ delete_db_failed ]],user={{ user }}"
       }
     },
     "validate": {
