@@ -20,7 +20,7 @@
         "command": "mysql.auth"
       },
       "create_database": {
-        "terminate": "CREATE DATABASE {name};",
+        "terminate": "CREATE DATABASE {{ name }};",
         "failed": "log:[[ add_db_failed ],name={{ name }}"
       }
     },
