@@ -13,8 +13,8 @@ SOURCES += main.cpp \
     Bootstrap/Startup.cpp \
     App/Application.cpp \
     App/Terminal/Terminal.cpp \
-    App/Services/JsonFile.cpp \
-    App/Services/Thread.cpp \
+    App/Utilities/JsonFile.cpp \
+    App/Utilities/Thread.cpp \
     App/Settings/Container.cpp
 
 # The following define makes your compiler emit warnings if you use
@@ -32,6 +32,6 @@ HEADERS += \
     Bootstrap/Startup.h \
     App/Application.h \
     App/Terminal/Terminal.h \
-    App/Services/JsonFile.h \
-    App/Services/Thread.h \
+    App/Utilities/JsonFile.h \
+    App/Utilities/Thread.h \
     App/Settings/Container.h

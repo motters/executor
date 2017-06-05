@@ -5,7 +5,7 @@
 #include <QThread>
 #include <QMutex>
 
-namespace App { namespace Services{
+namespace App { namespace Utilities{
     class Thread : public QObject
     {
         Q_OBJECT

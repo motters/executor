@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../executor/App/Services/Thread.h"
+#include "../../executor/App/Utilities/Thread.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -20,30 +20,30 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_App__Services__Thread_t {
+struct qt_meta_stringdata_App__Utilities__Thread_t {
     QByteArrayData data[5];
-    char stringdata0[58];
+    char stringdata0[59];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_App__Services__Thread_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_App__Utilities__Thread_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_App__Services__Thread_t qt_meta_stringdata_App__Services__Thread = {
+static const qt_meta_stringdata_App__Utilities__Thread_t qt_meta_stringdata_App__Utilities__Thread = {
     {
-QT_MOC_LITERAL(0, 0, 21), // "App::Services::Thread"
-QT_MOC_LITERAL(1, 22, 13), // "workRequested"
-QT_MOC_LITERAL(2, 36, 0), // ""
-QT_MOC_LITERAL(3, 37, 8), // "finished"
-QT_MOC_LITERAL(4, 46, 11) // "foreverLoop"
+QT_MOC_LITERAL(0, 0, 22), // "App::Utilities::Thread"
+QT_MOC_LITERAL(1, 23, 13), // "workRequested"
+QT_MOC_LITERAL(2, 37, 0), // ""
+QT_MOC_LITERAL(3, 38, 8), // "finished"
+QT_MOC_LITERAL(4, 47, 11) // "foreverLoop"
 
     },
-    "App::Services::Thread\0workRequested\0"
+    "App::Utilities::Thread\0workRequested\0"
     "\0finished\0foreverLoop"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_App__Services__Thread[] = {
+static const uint qt_meta_data_App__Utilities__Thread[] = {
 
  // content:
        7,       // revision
@@ -73,7 +73,7 @@ static const uint qt_meta_data_App__Services__Thread[] = {
        0        // eod
 };
 
-void App::Services::Thread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void App::Utilities::Thread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         Thread *_t = static_cast<Thread *>(_o);
@@ -105,26 +105,26 @@ void App::Services::Thread::qt_static_metacall(QObject *_o, QMetaObject::Call _c
     Q_UNUSED(_a);
 }
 
-const QMetaObject App::Services::Thread::staticMetaObject = {
-    { &QObject::staticMetaObject, qt_meta_stringdata_App__Services__Thread.data,
-      qt_meta_data_App__Services__Thread,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
+const QMetaObject App::Utilities::Thread::staticMetaObject = {
+    { &QObject::staticMetaObject, qt_meta_stringdata_App__Utilities__Thread.data,
+      qt_meta_data_App__Utilities__Thread,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
 };
 
 
-const QMetaObject *App::Services::Thread::metaObject() const
+const QMetaObject *App::Utilities::Thread::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *App::Services::Thread::qt_metacast(const char *_clname)
+void *App::Utilities::Thread::qt_metacast(const char *_clname)
 {
     if (!_clname) return Q_NULLPTR;
-    if (!strcmp(_clname, qt_meta_stringdata_App__Services__Thread.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_App__Utilities__Thread.stringdata0))
         return static_cast<void*>(const_cast< Thread*>(this));
     return QObject::qt_metacast(_clname);
 }
 
-int App::Services::Thread::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int App::Utilities::Thread::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QObject::qt_metacall(_c, _id, _a);
     if (_id < 0)
@@ -142,13 +142,13 @@ int App::Services::Thread::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void App::Services::Thread::workRequested()
+void App::Utilities::Thread::workRequested()
 {
     QMetaObject::activate(this, &staticMetaObject, 0, Q_NULLPTR);
 }
 
 // SIGNAL 1
-void App::Services::Thread::finished()
+void App::Utilities::Thread::finished()
 {
     QMetaObject::activate(this, &staticMetaObject, 1, Q_NULLPTR);
 }

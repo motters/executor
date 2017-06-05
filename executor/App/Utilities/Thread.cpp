@@ -7,7 +7,7 @@
 #include <QDebug>
 #include <QCoreApplication>
 
-namespace App { namespace Services
+namespace App { namespace Utilities
 {
 
     /**

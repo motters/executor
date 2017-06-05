@@ -5,7 +5,7 @@
 #include <QDebug>
 #include <QJsonObject>
 
-namespace App { namespace Services {
+namespace App { namespace Utilities {
     class JsonFile
     {
 
