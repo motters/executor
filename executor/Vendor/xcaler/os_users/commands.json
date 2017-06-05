@@ -1,0 +1,44 @@
+{
+
+  "add_user": {
+    "commands": {
+      "create_user": {
+        "terminate": "useradd -e {{ date }} {{ username }}",
+        "response": "NULL",
+        "failed": "log:[[ user_add_failed ]],username={{ username }},date={{ date }}"
+      },
+      "check_user_added": {
+        "terminate": "ls -l",
+        "response": "contains:{{ username }}",
+        "failed": "command:delete_user|log:[[ user_add_failed ]],username={{ username }},date={{ date }}",
+        "success": "log:[[ user_added ]],username={{ username }},date={{ date }}"
+      },
+      "random_shell_script": {
+        "shell": "sudo /etc/executor/shells/hello_world.sh",
+        "response": "Hello World"
+      },
+      "generate_welcome_message": {
+        "feature": "template:os_user.welcome_message,username={{ username }},root_address=##template.welcome_message_location##"
+      }
+    },
+    "validate": {
+      "date": "date:yyyy-mm-dd",
+      "username": "min:3|max:10|!local_user_exsists"
+    }
+  },
+
+  "lock_user_after": {
+    "command": {
+      "lock": {
+        "terminate": "chage -I {number} {username}",
+        "response": "NULL",
+        "failed": "log:[user_lock_failed],{username},{number}"
+      }
+    },
+    "validate": {
+      "number": "min:1|max:360",
+      "username": "min:3|max:10|!local_user_exsists"
+    }
+  }
+
+}

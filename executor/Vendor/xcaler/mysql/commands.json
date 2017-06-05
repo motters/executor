@@ -1,0 +1,55 @@
+{
+
+  "auth": {
+    "command": {
+      "auth": {
+        "terminate": "mysql -h {{ host }} -u {{ user }} -p {{ password }}",
+        "failed": "log:[[ mysql_auth_failed ]],user={{ user }}"
+      }
+    },
+    "validate": {
+      "host": "min:3|max:10|required",
+      "user": "min:3|max:10|!db_user_exsists|required",
+      "password": "required"
+    }
+  },
+
+  "add_database": {
+    "command": {
+      "auth": {
+        "command": "mysql.auth"
+      },
+      "create_database": {
+        "terminate": "CREATE DATABASE {{ name }};",
+        "failed": "log:[[ add_db_failed ],name={{ name }}"
+      }
+    },
+    "roll_back":{
+      "delete_database": {
+        "command": "command:mysql.delete_database"
+      }
+    },
+    "validate": {
+      "name": "min:3|max:10|!db_exsists"
+    }
+  },
+
+  "delete_database": {
+    "command": {
+      "auth": {
+        "command": "mysql.auth:host={{ host }},username={{ user }},password={{ password }}"
+      },
+      "create_database": {
+        "terminate": "DROP DATABASE {{ name }};",
+        "failed": "log:[[ delete_db_failed ]],user={{ user }}"
+      }
+    },
+    "validate": {
+      "name": "min:3|max:10|!db_exsists",
+      "host": "min:3|max:10|required",
+      "user": "min:3|max:10|!db_user_exsists|required",
+      "password": "required"
+    }
+  }
+
+}

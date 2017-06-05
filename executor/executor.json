@@ -1,0 +1,18 @@
+{
+	"requires": {
+		
+	}
+
+  	"key": "1234567890qwertyuiopasdfghjklzx",
+
+  	"check_buffer": "60",
+  "delay_buffer": "15",
+
+  "interface": true,
+  "interface_auth": "file",
+  "interface_port": "5648",
+
+  "command_line": true,
+  "command_line_auth": false
+
+}
