@@ -46,4 +46,7 @@ DISTFILES += \
     Vendor/xcaler/mysql/templates/os_user/welcome_message \
     Vendor/xcaler/mysql/.gitignore \
     Vendor/xcaler/os_users/.gitignore \
-    readme.md
+    readme.md \
+    Vendor/xcaler/mysql/install.json \
+    Vendor/xcaler/mysql/updates/1.0.0.json \
+    Vendor/xcaler/mysql/updates/1.0.1.json

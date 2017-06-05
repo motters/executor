@@ -3,6 +3,9 @@
 // Include externla deps
 #include <QObject>
 
+// Include the setting contain
+#include "Settings/Container.h"
+
 namespace App
 {
 
@@ -13,7 +16,10 @@ namespace App
      * @param parent
      */
     Application::Application(QObject* parent)
-        : QObject(parent)
+        : QObject(parent),
+
+          // Create instance of the settings container
+          settings_container(*new Settings::Container)
     {
 
     }
