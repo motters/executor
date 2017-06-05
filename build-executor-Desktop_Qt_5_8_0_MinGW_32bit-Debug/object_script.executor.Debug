@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\Startup.o
+./debug\Application.o
+./debug\Terminal.o
+./debug\JsonFile.o
+./debug\Thread.o
+./debug\Container.o
+./debug\moc_Startup.o
+./debug\moc_Application.o
+./debug\moc_Thread.o
+);

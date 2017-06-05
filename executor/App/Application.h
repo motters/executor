@@ -1,11 +1,18 @@
 #pragma once
 
+// Include externla deps
+#include <QObject>
+
 namespace App
 {
-    class Application
+    class Application :  public QObject
     {
+        Q_OBJECT
+
         public:
-            Application();
+            Application(QObject *parent);
+            ~Application();
+
     };
 }
 

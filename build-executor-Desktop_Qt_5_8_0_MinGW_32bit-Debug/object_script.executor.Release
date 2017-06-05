@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\Startup.o
+./release\Application.o
+./release\Terminal.o
+./release\JsonFile.o
+./release\Thread.o
+./release\Container.o
+./release\moc_Startup.o
+./release\moc_Application.o
+./release\moc_Thread.o
+);
