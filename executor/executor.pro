@@ -35,3 +35,15 @@ HEADERS += \
     App/Utilities/JsonFile.h \
     App/Utilities/Thread.h \
     App/Settings/Container.h
+
+DISTFILES += \
+    executor.json \
+    Vendor/xcaler/mysql/commands.json \
+    Vendor/xcaler/mysql/module.json \
+    Vendor/xcaler/os_users/commands.json \
+    Vendor/xcaler/os_users/permissions.json \
+    Vendor/xcaler/mysql/shells/hello_world.sh \
+    Vendor/xcaler/mysql/templates/os_user/welcome_message \
+    Vendor/xcaler/mysql/.gitignore \
+    Vendor/xcaler/os_users/.gitignore \
+    readme.md
