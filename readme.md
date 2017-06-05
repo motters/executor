@@ -2,35 +2,34 @@
 
 This program is to create an easy, secure method of executing OS commands.
 
-The goal is to be able to configure and control an OS with simple **modular** configufation packages that can be
-installed and unintalled.
+The goal is to be able to configure and control an OS with simple **modular** configuration packages that can be
+installed and uninstalled.
 
 
 ## Greater Security
 
-The program gives greater secuirty by using a white list approach to the avaiable commands that can be ran by each
-package.
+The program gives greater security by using a white list approach to the available commands that can be ran by each package.
 
-When installing addtional modules into executor the server admin will be shown the commands that the command package
-requires to perfrom its actions, this can then be confirmed or denied (Like apps on phones).
+When installing additional modules into executor the server admin will be shown the commands that the command package
+requires performing its actions, this can then be confirmed or denied (Like apps on phones).
 
 
-## Exexuting Commands
+## Executor Commands
 
-As commands packages are installed they can be accessed via the commands prompt or by an interal running service.
+As commands packages are installed they can be accessed via the commands prompt or by an internal running service.
 
 
 ## Installs and Updates
 
-Exector is not only designed as a gateway to running commands but also design to manage system packages.
+Executor is not only designed as a gateway to running commands but also design to manage system packages.
 
-For example a system package can be wrote for MYSQL. This would cover installing MYSQL and managing updates published
+For example, a system package can be wrote for MYSQL. This would cover installing MYSQL and managing updates published
 by the author.
 
 
 ## Executor Packages
 
-Executor packages are made by simple json files
+Executor packages are made by simple JSON files
 
 ### Package File
 
@@ -39,7 +38,7 @@ This file contains information about the Executor package.
 
 ### Commands File
 
-Using shell scripts is highly discouraged when using executor are it removed the benifits of the white listing approach.
+Using shell scripts is highly discouraged when using executor are it removed the benefits of the white listing approach.
 Commands that are required are built up within the command file.
 
 Commands are far more high level than shell scripts as they include addition help such as:
@@ -54,7 +53,7 @@ Commands are far more high level than shell scripts as they include addition hel
 
 #### Functions Explained
 
-Function are inbuilt methods within Executor that perform actions. For example when analysing a response from a ran
+Function are inbuilt methods within Executor that perform actions. For example, when analysing a response from a ran
 commands one can run the below:
 
 ```json
@@ -75,3 +74,4 @@ Templates allow an easy way of making new files and editing existing files for t
 Templates can be created with place holder and when the template method is called, it will take the contain of
 the template and insert the relevant data into the place holders. Executor will then create or edit an exists file,
 making adding and modifying files easy.
+
